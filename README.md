@@ -1,54 +1,27 @@
-# "README generator"
+# "prject"
 
   ## Description
   
-  - "This application enables one to quickly and organizedly create a professional README.md file for a project."
-  
-  ## Table of Contents
-  -Usage
-
-  -Credits
-
-  -License
-
-  -Features
-
-  -Contribute
-
+  - undefined
   
   ## Usage
   
-  - "Simply run 'node index' and follow the prompts to fill in the information pertinent to a professional README"
+  - undefined
   
   ## Credits
-  Michael Marlowe: marlowemich.github.com
+  c1<br>  c2<br>  c3<br>  
 
-  undefined
-
-  undefined
-
-  undefined
-
-  undefined
-
-
-  ## License
-  
-  -badge
-  
   ## features
-  Node.js
 
-  Inquirer npm
-
-  JavaScript
-
-  undefined
-
-  undefined
-
-  
+  f1<br>  f2<br>  f3<br>  
   
   ## contribute 
   
-  - "just make a pull request"
+  - undefined
+
+  
+
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  
+
+  ![Screenshot](undefined)
