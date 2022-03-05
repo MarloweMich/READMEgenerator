@@ -15,19 +15,18 @@ const questionSet1 = [
     message: "What is the name of the project?",
     name: "name",
   },
-  // {
-  //   type: "editor",
-  //   message:
-  //     "Briefly describe the project. Mention what problem it solves or what use it fills.",
-  //   name: "desc",
-  // },
-  // {
-  //   type: "editor",
-  //   message: "Describe how to install and use the application",
-  //   name: "usage",
-  // },
+  {
+    type: "editor",
+    message:
+      "Briefly describe the project. Mention what problem it solves or what use it fills.",
+    name: "desc",
+  },
+  {
+    type: "editor",
+    message: "Describe how to install and use the application",
+    name: "usage",
+  },
 ];
-//questionsets 2 and 3 sometimes repeat in console where it won't accept the first input. what going on?
 const questionSet2 = [
   {
     type: "input",
@@ -54,28 +53,28 @@ const questionSet3 = [
 ];
 
 const questionSet4 = [
-  // {
-  //   type: "list",
-  //   message: "How can people get involved in the project?",
-  //   name: "help",
-  //   choices: [
-  //     "Email a contributor about getting involved",
-  //     "Make a pull request to get involved",
-  //     "Message a contributor on social media to get involved",
-  //     "No contributions will be accepted",
-  //   ],
-  // },
+  {
+    type: "list",
+    message: "How can people get involved in the project?",
+    name: "help",
+    choices: [
+      "Email a contributor about getting involved",
+      "Make a pull request to get involved",
+      "Message a contributor on social media to get involved",
+      "No contributions will be accepted",
+    ],
+  },
   {
     type: "list",
     message: "What type of license will you be using for this project?",
     name: "license",
     choices: ["MIT", "ISC", "Unlicense", "WTFPL"],
   },
-  // {
-  //   type: 'input',
-  //   message: 'Copy and paste path to screenshot of application for the README.md, here.',
-  //   name: 'image',
-  // },
+  {
+    type: 'input',
+    message: 'Copy and paste path to screenshot of application for the README.md, here.',
+    name: 'image',
+  },
 ];
 
 //FUNCTIONS RUNNING THROUGH QUESTIONS AND STORING DATA
@@ -87,15 +86,6 @@ async function answerSet() {
     const data_2 = await inquirer.prompt(questionSet2);
     features.push(data_2.feats);
     if (data_2.featsConfirm === false) {
-
-      // for (let i=0; i<features.length; i++){
-      //   features[i] = Text(`${features[i]}\n`)
-      // }
-      // features.forEach(element => {
-      //   element = `${features}\n`;
-      // });
-
-
       return contsAnswer();
     } else {
       return featAnswer();
@@ -106,14 +96,6 @@ async function answerSet() {
       contributors.push(data_3.conts);
       console.log(contributors);
       if (data_3.contsConfirm === false) {
-
-        // for (let i=0; i<contributors.length; i++){
-        //   contributors[i] = Text(`${contributors[i]}\n`)
-        // }
-          // contributors.forEach(element => {
-          //   element = `${contributors}\n`;
-          // });
-
 
         const data_4 = await inquirer.prompt(questionSet4);
         if (data_4.license === "MIT") {
@@ -170,11 +152,11 @@ function writeToFile(ansTring) {
   ## Credits
   ${contsSplit}
 
-  ## features
+  ## Features
 
   ${featsSplit}
   
-  ## contribute 
+  ## How to Contribute 
   
   - ${data.help}\n
   \n

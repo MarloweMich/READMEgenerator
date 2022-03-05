@@ -1,27 +1,27 @@
-# "prject"
+# "README generator"
 
   ## Description
   
-  - undefined
+  - "Allows for fast and easy generation of a README.md for any project."
   
   ## Usage
   
-  - undefined
+  - "With the files saved somewhere on your local machine, run the program with \"node index.js\" and answer the prompts. The answers that you supply will be placed in the appropriate spots. Have an image URL ready to paste for the last question and go ahead and have every contributors github pages as well to expedite the process."
   
   ## Credits
-  c1<br>  c2<br>  c3<br>  
+  Michael Marlowe - github.com/MarloweMich<br>  
 
-  ## features
+  ## Features
 
-  f1<br>  f2<br>  f3<br>  
+  node.js<br>  inquirer npm<br>  
   
-  ## contribute 
+  ## How to Contribute 
   
-  - undefined
+  - "Make a pull request to get involved"
 
-  
-
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
 
-  ![Screenshot](undefined)
+  [![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)
+  
+
+  ![Screenshot](./assets/Screenshot.png)
