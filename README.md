@@ -2,11 +2,11 @@
 
   ## Description
   
-  - "Allows for fast and easy generation of a README.md for any project."
+  - "Provides an easy and fast way to generate a README.md for any project. This very readme was created using the application."
   
   ## Usage
   
-  - "With the files saved somewhere on your local machine, run the program with \"node index.js\" and answer the prompts. The answers that you supply will be placed in the appropriate spots. Have an image URL ready to paste for the last question and go ahead and have every contributors github pages as well to expedite the process."
+  - "Simply run \"node index\" with the code saved somewhere on your local machine from the terminal. Answer the prompts and the information that you provide will be automatically placed in the appropriate places on the generated file. It is recommended to have the URL for a screenshot to be used handy as well as the github pages of all contributors to expedite the process."
   
   ## Credits
   Michael Marlowe - github.com/MarloweMich<br>  
