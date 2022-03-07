@@ -108,18 +108,19 @@ async function answerSet() {
           license = `[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)`;}
 
         const ansObj = {
-          name: JSON.stringify(data_1.name),
-          desc: JSON.stringify(data_1.desc),
-          usage: JSON.stringify(data_1.usage),
-          features: JSON.stringify(features),
-          contributors: JSON.stringify(contributors),
-          license: JSON.stringify(license),
-          help: JSON.stringify(data_4.help),
-          image: JSON.stringify(data_4.image)
+          name: (data_1.name),
+          desc: (data_1.desc),
+          usage: (data_1.usage),
+          features: (features),
+          contributors: (contributors),
+          license: (license),
+          help: (data_4.help),
+          image: (data_4.image)
         };
-        const ansTring = JSON.stringify(ansObj);
+        // const ansTring = JSON.stringify(ansObj);
 
-        return ansTring;
+        // return ansTring;
+        return ansObj;
       } else {
         return contsAnswer();
       }
@@ -128,9 +129,10 @@ async function answerSet() {
 }
 
 //Function to write README file
-function writeToFile(ansTring) {
-  const generateMarkdown = function (ansTring) {
-    const data = JSON.parse(ansTring);
+function writeToFile(ansObj) {
+  const generateMarkdown = function (ansObj) {
+    // const data = JSON.parse(ansObj);
+    const data = ansObj;
     let contsSplit = '';
     for (let i=0; i<contributors.length; i++){
       contsSplit+=contributors[i]+'<br>  '
@@ -139,15 +141,15 @@ function writeToFile(ansTring) {
     for (let i=0; i<features.length; i++){
       featsSplit+=features[i]+'<br>  '
     }
-    return `# ${data.name}
+    return `# ${data.name.trim('"')}
 
   ## Description
   
-  - ${data.desc}
+  - ${data.desc.trim('"')}
   
   ## Usage
   
-  - ${data.usage}
+  - ${data.usage.trim('"')}
   
   ## Credits
   ${contsSplit}
@@ -158,15 +160,15 @@ function writeToFile(ansTring) {
   
   ## How to Contribute 
   
-  - ${data.help}\n
+  - ${data.help.trim('"')}\n
   \n
   ${license}
   \n
-  ![Screenshot](${data.image})`;
+  ![Screenshot](${data.image.trim('"')})`;
   };
   //passing in generateMarkdown from another file made it not accept it as data because it had to bea string. putting it on the same page made it nonissue.
   {
-    fs.writeFile("README.md", generateMarkdown(ansTring), (err) => {
+    fs.writeFile("README.md", generateMarkdown(ansObj), (err) => {
       if (err) throw err;
       console.log("Successfully wrote to README.md");
     });
