@@ -1,27 +1,39 @@
-# project
+# README generator
 
-  ## Description
-  
-  - this desc
-  
-  ## Usage
-  
-  - this usage
-  
-  ## Credits
-  cont1<br>  cont2<br>  cont3<br>  
+  ## Table of Contents
+  [Description](###-description)
 
-  ## Features
+  [Usage](###-usage)
 
-  feat1<br>  feat2<br>  feat3<br>  
+  [Credits](###-credits)
+
+  [Features](###-features)
+
+  [How to Contribute](###-how-to-contribute)
+
+
+  ### Description
   
-  ## How to Contribute 
+  - Allows for fast and easy generation of a README.md for any project
   
-  - Make a pull request to get involved
+  ### Usage
+  
+  - Use "node index" in the terminal once the file location has been reached. Answer the prompts and the information that you provide will be filled out in the appropriate spots on the readme. For expediency on the user's end, it reccomended to have the URL of screenshot of the project handy as well as remembering to include the 'https://' on the github homepages for all contributors.
+  
+  ### Credits
+  [https://github.com/MarloweMich](https://github.com/MarloweMich)<br>  
+
+  ### Features
+
+  node.js<br>  JavaScript<br>  inquirer npm<br>  
+  
+  ### How to Contribute 
+  
+  - Make a pull request to get involved"
 
   
 
-  [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+  [![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)
   
 
   ![Screenshot](./assets/Screenshot.png)

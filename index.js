@@ -117,9 +117,6 @@ async function answerSet() {
           help: (data_4.help),
           image: (data_4.image)
         };
-        // const ansTring = JSON.stringify(ansObj);
-
-        // return ansTring;
         return ansObj;
       } else {
         return contsAnswer();
@@ -131,17 +128,23 @@ async function answerSet() {
 //Function to write README file
 function writeToFile(ansObj) {
   const generateMarkdown = function (ansObj) {
-    // const data = JSON.parse(ansObj);
     const data = ansObj;
     let contsSplit = '';
     for (let i=0; i<contributors.length; i++){
-      contsSplit+=contributors[i]+'<br>  '
+      contsSplit+=`[${contributors[i]}](${contributors[i]})<br>  `
     }
     let featsSplit = '';
     for (let i=0; i<features.length; i++){
       featsSplit+=features[i]+'<br>  '
     }
     return `# ${data.name.trim('"')}
+
+  ## Table of Contents
+  [Description](##-description)\n
+  [Usage](##-usage)\n
+  [Credits](##-credits)\n
+  [Features](##-features)\n
+  [How to Contribute](##-how-to-contribute)\n
 
   ## Description
   
@@ -160,13 +163,12 @@ function writeToFile(ansObj) {
   
   ## How to Contribute 
   
-  - ${data.help.trim('"')}\n
+  - ${data.help.trim('"')}"\n
   \n
   ${license}
   \n
   ![Screenshot](${data.image.trim('"')})`;
   };
-  //passing in generateMarkdown from another file made it not accept it as data because it had to bea string. putting it on the same page made it nonissue.
   {
     fs.writeFile("README.md", generateMarkdown(ansObj), (err) => {
       if (err) throw err;
