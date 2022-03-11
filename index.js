@@ -6,6 +6,7 @@ const { createContext } = require("vm");
 
 const features = [];
 const contributors = [];
+const emails = [];
 var license = {};
 
 //Array of questions for user input
@@ -42,8 +43,13 @@ const questionSet2 = [
 const questionSet3 = [
   {
     type: "input",
-    message: "Specify one contributor's github homepage.",
-    name: "conts",
+    message: "Specify one contributor's github username.",
+    name: "gits",
+  },
+  {
+    type: "input",
+    message: "What is this contributor's email address?",
+    name: "email"
   },
   {
     type: "confirm",
@@ -93,7 +99,8 @@ async function answerSet() {
 
     async function contsAnswer() {
       const data_3 = await inquirer.prompt(questionSet3);
-      contributors.push(data_3.conts);
+      contributors.push(data_3.gits);
+      emails.push(data_3.email);
       console.log(contributors);
       if (data_3.contsConfirm === false) {
 
@@ -129,10 +136,14 @@ async function answerSet() {
 function writeToFile(ansObj) {
   const generateMarkdown = function (ansObj) {
     const data = ansObj;
-    let contsSplit = '';
-    for (let i=0; i<contributors.length; i++){
-      contsSplit+=`[${contributors[i]}](${contributors[i]})<br>  `
+    let gitsSplit = '';
+    for (let i=0; i<contributors.length && i<emails.length; i++){
+      gitsSplit+=`<br>  [${contributors[i]}](https://github.com/${contributors[i]})<br>  [${emails[i]}](mailto:${emails[i]})`
     }
+    // let emailSplit = '';
+    // for (let i=0; i<emails.length; i++){
+    //   gitsSplit+=`[${emails[i]}](https://github.com/${emails[i]})<br>  `
+    // }
     let featsSplit = '';
     for (let i=0; i<features.length; i++){
       featsSplit+=features[i]+'<br>  '
@@ -141,27 +152,27 @@ function writeToFile(ansObj) {
 
   ## Table of Contents
   [Description](##-description)\n
-  [Usage](##-usage)\n
-  [Credits](##-credits)\n
-  [Features](##-features)\n
-  [How to Contribute](##-how-to-contribute)\n
+  [Usage](##usage)\n
+  [Credits](##credits)\n
+  [Features](##features)\n
+  [How to Contribute](##how-to-contribute)\n
 
-  ## Description
+  ##Description
   
   - ${data.desc.trim('"')}
   
-  ## Usage
+  ##Usage
   
   - ${data.usage.trim('"')}
   
-  ## Credits
-  ${contsSplit}
+  ##Credits
+  ${gitsSplit}
 
-  ## Features
+  ##Features
 
   ${featsSplit}
   
-  ## How to Contribute 
+  ##How to Contribute 
   
   - ${data.help.trim('"')}"\n
   \n
