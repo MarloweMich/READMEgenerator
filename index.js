@@ -150,12 +150,6 @@ function writeToFile(ansObj) {
     }
     return `# ${data.name.trim('"')}
 
-  ## Table of Contents
-  [Description](##-description)\n
-  [Usage](##usage)\n
-  [Credits](##credits)\n
-  [Features](##features)\n
-  [How to Contribute](##how-to-contribute)\n
 
   ##Description
   

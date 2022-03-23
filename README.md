@@ -1,33 +1,19 @@
-# README generator
-
-[!!!!-----VIDEO HERE------!!!!!!](https://www.youtube.com/watch?v=ii8oCl2sa1I&t=1s)
-
-  ## Table of Contents
-  [Description](##-description)
-
-  [Usage](##usage)
-
-  [Credits](##credits)
-
-  [Features](##features)
-
-  [How to Contribute](##how-to-contribute)
-
+# Note Taker
 
   ##Description
   
-  - Allows for fast and easy generation of a README.md for any project
+  - Access, create and delete notes as needed. All created notes are listed in the side while and can be accessed through clicking on them in the navbar.
   
   ##Usage
   
-  - Use "node index" in the terminal once the file location has been reached. Answer the prompts and the information that you provide will be filled out in the appropriate spots on the readme. For expediency on the user's end, it reccomended to have the URL of screenshot of the project handy as well as remembering to include the 'https://' on the github homepages for all contributors.
+  - Type in your note. Give it a title, write a body underneath. Click the save icon in the top right corner of the screen to save that note. Click the red trashccan button on the navabr to delete any note you want. Clicking the plus sign enables you to write another note when you have a note currently on displayed.
   
   ##Credits
-  <br>  [marlowemich](https://github.com/marlowemich)<br>  [marlowemich@gmail.com](mailto:marlowemich@gmail.com)
+  <br>  [MarloweMich](https://github.com/MarloweMich)<br>  [marlowemich@gmail.com](mailto:marlowemich@gmail.com)
 
   ##Features
 
-  node.js<br>  JavaScript<br>  inquirer npm<br>  
+  node.js<br>  express.js<br>  
   
   ##How to Contribute 
   
@@ -38,6 +24,4 @@
   [![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)
   
 
-  [VIDEO HERE](https://www.youtube.com/watch?v=ii8oCl2sa1I&t=1s)
-
-  ![Screenshot](./assets/Screenshot.png)
+  ![Screenshot](./assets/screenshot.png)
